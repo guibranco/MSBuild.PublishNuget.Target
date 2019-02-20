@@ -8,7 +8,7 @@
     <owners>Guilherme Branco Stracini</owners>
     <projectUrl>https://github.com/guibranco/MSBuild.PublishNuget.Target</projectUrl>
 	<iconUrl>https://raw.githubusercontent.com/guibranco/MSBuild.PublishNuget.Target/master/logo.png</iconUrl>
-	<license>https://github.com/guibranco/MSBuild.PublishNuget.Target/blob/master/LICENSE</license>
+	<licenseUrl>https://github.com/guibranco/MSBuild.PublishNuget.Target/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A build target that pack and publish the project to a private nuget server.</description>
     <copyright>Copyright 2019 Guilherme Branco Stracini</copyright>
