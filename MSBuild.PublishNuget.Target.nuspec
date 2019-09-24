@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package >
   <metadata minClientVersion="2.5">
-    <id>MSBuild.PublisNuget.Target</id>
-    <version>1.0.1</version>
+    <id>MSBuild.PublishNuget.Target</id>
+    <version>2.0.0</version>
     <title>MSBuild Publish Nuget Target</title>
     <authors>Guilherme Branco Stracini</authors>
     <owners>Guilherme Branco Stracini</owners>
