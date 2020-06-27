@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<PropertyGroup>
-		<PackageAPIKey Condition="'$(PackageAPIKey)'=''"></PackageAPIKey>
-		<PackagesServer Condition="'${PackagesServer)'==''">https://api.nuget.org/v3/index.json</PackageServer>
-	</PropertyGroup>
-	<Target Name="NugetPackage" Condition="'$(Configuration)' == 'Release'" AfterTargets="AfterBuild">		
-		<GetAssemblyIdentity AssemblyFiles="$(OutputPath)$(AssemblyName).dll">
-			<Output TaskParameter="Assemblies" ItemName="OutputAssemblyInfo" />
-		</GetAssemblyIdentity>
-		<Message Text="Info: %(OutputAssemblyInfo.Version)" />
-		<RemoveDir Directories="$(PackageDir)" />
-		<MakeDir Directories="$(PackageDir)" />
-		<Exec WorkingDirectory="$(BuildDir)" Command="nuget pack $(ProjectFileName) -OutputDir $(PackageDir) -Version %(OutputAssemblyInfo.Version) -IncludeReferencedProjects -Prop Configuration=Release" />
-		<Exec Command="nuget push &quot;$(PackageDir)\$(AssemblyName).%(OutputAssemblyInfo.Version).nupkg&quot; $(PackageAPIKey) -Source $(PackageServer)" />
-	</Target>	
+    <PropertyGroup>
+        <PackageAPIKey Condition="'$(PackageAPIKey)'=''" />
+        <PackageServer Condition="'${PackagesServer)'==''">https://api.nuget.org/v3/index.json</PackageServer>
+    </PropertyGroup>
+    <Target Name="NugetPackage" Condition="'$(Configuration)' == 'Release'" AfterTargets="AfterBuild">
+        <GetAssemblyIdentity AssemblyFiles="$(OutputPath)$(AssemblyName).dll">
+        <Output TaskParameter="Assemblies" ItemName="OutputAssemblyInfo" />
+        </GetAssemblyIdentity>
+        <Message Text="Info: %(OutputAssemblyInfo.Version)" />
+        <RemoveDir Directories="$(PackageDir)" />
+        <MakeDir Directories="$(PackageDir)" />
+        <Exec WorkingDirectory="$(BuildDir)" Command="dotnet pack $(ProjectFileName) -c release --include-symbols  -p:PackageVersion=%(OutputAssemblyInfo.Version) -o $(PackageDir)" />
+        <Exec Command="dotnet nuget push -s $(PackageServer) -k $(PackageAPIKey) &quot;$(PackageDir)\$(AssemblyName).%(OutputAssemblyInfo.Version).nupkg&quot;" />
+    </Target>
 </Project>
