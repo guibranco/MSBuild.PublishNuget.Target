@@ -11,7 +11,7 @@
         <Message Text="Info: %(OutputAssemblyInfo.Version)" />
         <RemoveDir Directories="$(PackageDir)" />
         <MakeDir Directories="$(PackageDir)" />
-        <Exec WorkingDirectory="$(BuildDir)" Command="dotnet pack $(ProjectFileName) -c release --include-symbols  -p:PackageVersion=%(OutputAssemblyInfo.Version) -o $(PackageDir)" />
-        <Exec Command="dotnet nuget push -s $(PackageServer) -k $(PackageAPIKey) &quot;$(PackageDir)\$(AssemblyName).%(OutputAssemblyInfo.Version).nupkg&quot;" />
+        <Exec WorkingDirectory="$(BuildDir)" Command="nuget pack $(ProjectFileName) -OutputDir $(PackageDir) -Version %(OutputAssemblyInfo.Version) -IncludeReferencedProjects -Prop Configuration=Release" />
+        <Exec Command="nuget.exe push &quot;$(PackageDir)\$(AssemblyName).%(OutputAssemblyInfo.Version).nupkg&quot; $(PackageAPIKey) -Source $(PackageServer) " />
     </Target>
 </Project>
