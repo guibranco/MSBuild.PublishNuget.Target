@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <PackageAPIKey Condition="'$(PackageAPIKey)'=''" />
+        <PackageAPIKey Condition="'$(PackageAPIKey)'==''" />
         <PackageServer Condition="'${PackagesServer)'==''">https://api.nuget.org/v3/index.json</PackageServer>
     </PropertyGroup>
     <Target Name="NugetPackage" Condition="'$(Configuration)' == 'Release'" AfterTargets="AfterBuild">
