@@ -12,6 +12,6 @@
         <RemoveDir Directories="$(PackageDir)" />
         <MakeDir Directories="$(PackageDir)" />
         <Exec WorkingDirectory="$(BuildDir)" Command="nuget pack $(ProjectFileName) -OutputDir $(PackageDir) -Version %(OutputAssemblyInfo.Version) -IncludeReferencedProjects -Prop Configuration=Release" />
-        <Exec Command="nuget.exe push &quot;$(PackageDir)\$(AssemblyName).%(OutputAssemblyInfo.Version).nupkg&quot; $(PackageAPIKey) -Source $(PackageServer) " />
+        <Exec Command="nuget push &quot;$(PackageDir)\$(AssemblyName).%(OutputAssemblyInfo.Version).nupkg&quot; $(PackageAPIKey) -Source $(PackageServer) " />
     </Target>
 </Project>
