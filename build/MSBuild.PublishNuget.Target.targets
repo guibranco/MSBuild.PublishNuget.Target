@@ -2,7 +2,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <PackageAPIKey Condition="'$(PackageAPIKey)'==''" />
-        <PackageServer Condition="'${PackagesServer)'==''">https://api.nuget.org/v3/index.json</PackageServer>
+        <PackageServer Condition="'${PackageServer)'==''">https://api.nuget.org/v3/index.json</PackageServer>
     </PropertyGroup>
     <Target Name="NugetPackage" Condition="'$(Configuration)' == 'Release'" AfterTargets="AfterBuild">
         <GetAssemblyIdentity AssemblyFiles="$(OutputPath)$(AssemblyName).dll">
