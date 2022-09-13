@@ -19,6 +19,6 @@ deploy:
    branch: master
   tag: $(appveyor_build_version)
   auth_token:
-    secure: VgYYJdvNLy/n9/uxxlaF0bMpIIrVxCb+dGr66U9nWfPWSN2ySdfuilO8klAw0uvF
+    secure: AD1z81FqZlvGkCEyDzJ3g6sIJ93ecUE9EuqfUxc4CMiFGW139pWZk+/huuTY5jzG
   force_update: true
   artifact: Package
