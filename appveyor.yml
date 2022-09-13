@@ -2,7 +2,7 @@ version: 4.0.{build}
 skip_tags: true
 skip_commits:
   message: /(Create|Update).*\.(png|jpg|jpeg|bmp|gif|md)/
-image: Visual Studio 2017
+image: Visual Studio 2022
 build_script:
 - cmd: nuget pack MSBuild.PublishNuget.Target.nuspec -Version %APPVEYOR_BUILD_VERSION%
 artifacts:
