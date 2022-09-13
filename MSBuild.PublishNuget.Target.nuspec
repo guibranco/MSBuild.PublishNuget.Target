@@ -9,7 +9,7 @@
        <projectUrl>https://github.com/guibranco/MSBuild.PublishNuget.Target</projectUrl>
        <repository type="git" url="https://github.com/guibranco/MSBuild.PublishNuget.Target" />
        <icon>logo.png</icon>
-       <readme>readme.md</readme>
+       <readme>README.md</readme>
        <license type="file">LICENSE</license>
        <requireLicenseAcceptance>false</requireLicenseAcceptance>
        <description>A build target that pack and publish the project to a private nuget server.</description>
