@@ -1,8 +1,11 @@
 # MSBuild.PublishNuget.Target
 
+[![wakatime](https://wakatime.com/badge/github/guibranco/MSBuild.PublishNuget.Target.svg)](https://wakatime.com/badge/github/guibranco/MSBuild.PublishNuget.Target)
 [![Build status](https://ci.appveyor.com/api/projects/status/3n59qsn8u5bxjto6?svg=true)](https://ci.appveyor.com/project/guibranco/msbuild-publishnuget-target)
 [![MSBuild.PublishNuget.Target NuGet Version](https://img.shields.io/nuget/v/MSBuild.PublishNuget.Target.svg)](https://www.nuget.org/packages/MSBuild.PublishNuget.Target/)
 [![MSBuild.PublishNuget.Target NuGet Downloads](https://img.shields.io/nuget/dt/MSBuild.PublishNuget.Target.svg)](https://www.nuget.org/packages/MSBuild.PublishNuget.Target/)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7e12aa6e4ba9d4da5fc7/maintainability)](https://codeclimate.com/github/guibranco/MSBuild.PublishNuget.Target/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/7e12aa6e4ba9d4da5fc7/test_coverage)](https://codeclimate.com/github/guibranco/MSBuild.PublishNuget.Target/test_coverage)
 
 Provides a NuGet package that adds functionality to your project to auto pack and publish to a private nuget server the project as a nuget package.
 
