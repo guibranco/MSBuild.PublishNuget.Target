@@ -27,10 +27,10 @@ Install-Package MSBuild.PublishNuget.Target
 
 ## Instructions
 
-- Add the package to the project.
-- Make sure you have the `nuget.exe` executable in your path (i.e. Open a command prompt and type `nuget help` and check if the version of nuget is displayed).
-- You can download the most recent version of `nuget.exe`at [NuGet downloads page](https://www.nuget.org/downloads).
-- Open your `.csproj` and add the following property group to the file:
+-  Add the package to the project.
+-  Make sure you have the `nuget.exe` executable in your path (i.e. Open a command prompt and type `nuget help` and check if the version of nuget is displayed).
+-  You can download the most recent version of `nuget.exe`at [NuGet downloads page](https://www.nuget.org/downloads).
+-  Open your `.csproj` and add the following property group to the file:
 
 ```xml
 
@@ -40,7 +40,7 @@ Install-Package MSBuild.PublishNuget.Target
 </PropertyGroup>
 
 ```
-- Put your own data (Feed API Key and Feed Url).
-- Save the `.csproj`.
-- On Visual Studio, change the current configuration to `Release` if isn't yet.
-- Build!
+-  Put your own data (Feed API Key and Feed Url).
+-  Save the `.csproj`.
+-  On Visual Studio, change the current configuration to `Release` if isn't yet.
+-  Build!
