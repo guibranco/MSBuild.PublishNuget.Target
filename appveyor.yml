@@ -1,4 +1,4 @@
-version: 4.0.{build}
+version: 5.0.{build}
 skip_tags: true
 
 image: Visual Studio 2022
@@ -21,7 +21,6 @@ deploy:
   on:
    branch: main
   tag: $(appveyor_build_version)
-  auth_token:
-    secure: AD1z81FqZlvGkCEyDzJ3g6sIJ93ecUE9EuqfUxc4CMiFGW139pWZk+/huuTY5jzG
+  auth_token: $(GITHUB_TOKEN)
   force_update: true
   artifact: Package

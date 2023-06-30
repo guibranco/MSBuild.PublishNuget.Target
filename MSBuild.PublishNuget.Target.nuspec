@@ -2,7 +2,7 @@
 <package>
     <metadata minClientVersion="2.5">
        <id>MSBuild.PublishNuget.Target</id>
-       <version>4.0.0</version>
+       <version>5.0.0</version>
        <title>MSBuild Publish Nuget Target</title>
        <authors>Guilherme Branco Stracini</authors>
        <owners>Guilherme Branco Stracini</owners>
@@ -13,7 +13,7 @@
        <license type="file">LICENSE</license>
        <requireLicenseAcceptance>false</requireLicenseAcceptance>
        <description>A build target that pack and publish the project to a private nuget server.</description>
-       <copyright>Copyright 2022 Guilherme Branco Stracini</copyright>
+       <copyright>Copyright 2023 Guilherme Branco Stracini</copyright>
        <tags>MSBuild automatic pack publish nuget package private servertarget targets</tags>
    </metadata>
    <files>

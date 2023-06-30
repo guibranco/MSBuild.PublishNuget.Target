@@ -3,15 +3,20 @@
     <PropertyGroup>
         <PackageAPIKey Condition="'$(PackageAPIKey)'==''" />
         <PackageServer Condition="'${PackageServer)'==''">https://api.nuget.org/v3/index.json</PackageServer>
+        <IncludeReferencedProjects Condition="'$(IncludeReferencedProjects)'==''" />
+        <IncludeReferencedProjects Condition="'$(PackageIncludeReferencedProjects)'=='true'">-IncludeReferencedProjects</IncludeReferencedProjects>
     </PropertyGroup>
-    <Target Name="NugetPackage" Condition="'$(Configuration)' == 'Release'" AfterTargets="AfterBuild">
+    <Target Name="NugetPackage" Condition="'$(Configuration)' == 'Release'"
+        AfterTargets="AfterBuild">
         <GetAssemblyIdentity AssemblyFiles="$(OutputPath)$(AssemblyName).dll">
-        <Output TaskParameter="Assemblies" ItemName="OutputAssemblyInfo" />
+            <Output TaskParameter="Assemblies" ItemName="OutputAssemblyInfo" />
         </GetAssemblyIdentity>
         <Message Text="Info: %(OutputAssemblyInfo.Version)" />
         <RemoveDir Directories="$(PackageDir)" />
         <MakeDir Directories="$(PackageDir)" />
-        <Exec WorkingDirectory="$(BuildDir)" Command="nuget pack $(ProjectFileName) -OutputDir $(PackageDir) -Version %(OutputAssemblyInfo.Version) -IncludeReferencedProjects -Prop Configuration=Release" />
-        <Exec Command="nuget push &quot;$(PackageDir)\$(AssemblyName).%(OutputAssemblyInfo.Version).nupkg&quot; $(PackageAPIKey) -Source $(PackageServer) " />
+        <Exec WorkingDirectory="$(BuildDir)"
+            Command="nuget pack $(ProjectFileName) -OutputDir $(PackageDir) -Version %(OutputAssemblyInfo.Version) $(IncludeReferencedProjects) -Prop Configuration=Release" />
+        <Exec
+            Command="nuget push &quot;$(PackageDir)\$(AssemblyName).%(OutputAssemblyInfo.Version).nupkg&quot; $(PackageAPIKey) -Source $(PackageServer) " />
     </Target>
 </Project>
