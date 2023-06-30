@@ -37,10 +37,14 @@ Install-Package MSBuild.PublishNuget.Target
 <PropertyGroup>
     <PackageAPIKey>{{YOUR PRIVATE NUGET FEED KEY}}</PackageAPIKey>
     <PackageServer>{{YOUR PRIVATE NUGET FEED URL}}</PackageServer>
+    <PackageDir>{{ DIRECTORY TO GENERATE THE .NUPKG }}</PackageDir>
+    <PackageIncludeReferencedProjects>true</PackageIncludeReferencedProjects>
 </PropertyGroup>
 
 ```
 -  Put your own data (Feed API Key and Feed Url).
+-  Set the directory where the package will be generated
+-  Set true or false toinclude referenced projects (if ommited will be set to false)
 -  Save the `.csproj`.
 -  On Visual Studio, change the current configuration to `Release` if isn't yet.
 -  Build!
