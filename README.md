@@ -23,6 +23,8 @@ Nuget package: https://www.nuget.org/packages/MSBuild.PublishNuget.Target
 Install-Package MSBuild.PublishNuget.Target
 ```
 
+----------
+
 ## Instructions
 
 -  Add the package to the project.
