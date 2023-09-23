@@ -1,1 +1,2 @@
 theme: jekyll-theme-midnight
+description: 🎯 Provides a NuGet package that adds functionality to your project to auto pack and publish to a private nuget server the project as a nuget package.
