@@ -20,9 +20,7 @@ Provides a NuGet package that adds functionality to your project to auto pack an
 Nuget package: https://www.nuget.org/packages/MSBuild.PublishNuget.Target
 
 ```ps
-
 Install-Package MSBuild.PublishNuget.Target
-
 ```
 
 ## Instructions
@@ -33,15 +31,14 @@ Install-Package MSBuild.PublishNuget.Target
 -  Open your `.csproj` and add the following property group to the file:
 
 ```xml
-
 <PropertyGroup>
     <PackageAPIKey>{{YOUR PRIVATE NUGET FEED KEY}}</PackageAPIKey>
     <PackageServer>{{YOUR PRIVATE NUGET FEED URL}}</PackageServer>
     <PackageDir>{{ DIRECTORY TO GENERATE THE .NUPKG }}</PackageDir>
     <PackageIncludeReferencedProjects>true</PackageIncludeReferencedProjects>
 </PropertyGroup>
-
 ```
+
 -  Put your own data (Feed API Key and Feed Url).
 -  Set the directory where the package will be generated
 -  Set true or false toinclude referenced projects (if ommited will be set to false)
