@@ -9,7 +9,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/7e12aa6e4ba9d4da5fc7/test_coverage)](https://codeclimate.com/github/guibranco/MSBuild.PublishNuget.Target/test_coverage)
 [![CodeFactor](https://www.codefactor.io/repository/github/guibranco/MSBuild.PublishNuget.Target/badge)](https://www.codefactor.io/repository/github/guibranco/MSBuild.PublishNuget.Target)
 
-Provides a NuGet package that adds functionality to your project to auto pack and publish to a private nuget server the project as a nuget package.
+🎯⚙️ Provides a NuGet package that adds functionality to your project to auto-pack and publishes the project to a private nuget server as a nuget package.
 
 **Remarks:** This works only with `nuget.exe` executable and is designed for **.NET Framework** projects. Not for **.NET Core**
 
@@ -41,9 +41,9 @@ Install-Package MSBuild.PublishNuget.Target
 </PropertyGroup>
 ```
 
--  Put your own data (Feed API Key and Feed Url).
+-  Put your data (Feed API Key and Feed Url).
 -  Set the directory where the package will be generated
--  Set true or false toinclude referenced projects (if ommited will be set to false)
+-  Set true or false to include referenced projects (if omitted, will be set to false)
 -  Save the `.csproj`.
--  On Visual Studio, change the current configuration to `Release` if isn't yet.
+-  On Visual Studio, change the current configuration to `Release` if it isn't.
 -  Build!
