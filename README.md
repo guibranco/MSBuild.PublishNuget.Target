@@ -8,7 +8,7 @@
 
 🎯⚙️ **MSBuild.PublishNuget.Target** is a NuGet package that automates the process of packing and publishing your .NET Framework project as a NuGet package to a private NuGet server.
 
-> **Note:**  
+> [!Important]  
 > - This package is designed for **.NET Framework** projects and does not support **.NET Core** or newer frameworks.  
 > - It requires the `nuget.exe` executable to be available in your system's PATH.
 
