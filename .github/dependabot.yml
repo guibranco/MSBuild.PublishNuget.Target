@@ -14,5 +14,3 @@ updates:
   labels:
     - "github-actions"
     - "dependencies"
-
-    - "dependencies"
